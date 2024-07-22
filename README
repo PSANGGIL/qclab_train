@@ -1,1 +1,5 @@
 conda env create -f train_env.yaml
+
+
+github ref:
+https://sseozytank.tistory.com/41
