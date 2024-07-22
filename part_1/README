@@ -1,0 +1,13 @@
+#!/bin/bash
+
+1. make Custom dataset
+    Database must return smiles, singlet energy, triplet energy
+    energy data type  must be tensor
+
+2. When executing a file(1.py), print the length of the database and the first data
+
+3. The precision of energy must be Double tensor.
+
+
+data_path :
+"../qclab_training/data/test_db.csv"
