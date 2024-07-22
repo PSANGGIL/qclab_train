@@ -10,4 +10,4 @@
 
 
 data_path :
-"../qclab_training/data/test_db.csv"
+"../qclab_train/data/test_db.csv"
