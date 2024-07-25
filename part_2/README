@@ -1,0 +1,33 @@
+1. Dataset definition
+    x : [[1.0], [2.0], [3.0], [4.0]]
+    y : [[2.0], [4.0], [6.0], [8.0]]
+
+2. Model definition
+    Model	: single layer linear model, model must be returns a scalar value
+
+3. Loss function and optimizer settings
+    Loss function 	: MSE function
+    optimizer 		: Adam optimizer
+	learning rate 	: 0.001
+	
+	Print loss every 10 epochs
+
+4. Model training
+    epochs : 100
+
+5. Model evaluation
+    test_x : [[1.5], [2.5], [3.5], [4.5]]
+
+    print predicted y values
+
+6. save check point 
+	
+
+7. load check point 
+
+	load_test_x = [[50,100], [150,200], [250, 300]]
+	
+	** need reshape and change tensor type **
+	hint : print(x.shape), https://pytorch.org/docs/stable/generated/torch.reshape.html	
+
+
