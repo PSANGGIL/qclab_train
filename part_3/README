@@ -1,0 +1,67 @@
+#!/bin/bash
+
+1. Seed settings
+ Use np seeds
+ seed : 1234
+
+2. Download data and select data
+    
+	url : 'https://query1.finance.yahoo.com/v7/finance/download/{ticker}?period1=0&period2=9999999999&interval=1d&events=history'
+	
+	total_data:
+		data 		: 'AAPL' 
+		start_data 	: '2010-01-01'
+		end_data 	: '2020-01-01'
+	
+	target_data: 'Close' 
+
+3. Data normalization
+
+	Perform normalization process on 'Close' data
+	
+	return_values: normalized data, minimum value of data, maximum value of data
+
+4. Create sequence
+	Create sequences and labels for each data
+		
+	sequence_length: 60
+    
+	return_data_type : np array   
+    example:
+	for i in range(len(data) - seq_length):
+		sequence = data[i:i + seq_length]
+        label = data[i + seq_length]
+
+5. Defining datasets and dataloaders
+	
+	use torch random_split
+		train_dataset : total_data * 0.8
+		train_dataset : total_data * 0.2
+	
+	data_loader: 
+		return sequence , label
+
+	batch_size : 64
+
+6. RNN Model definition
+
+	input 	: sequence
+	output	: scalra values
+
+	input_dim 	: 1
+	hidden_dim 	: 128
+	output_dim 	: 1
+	num_layers 	: 2
+	
+7. Loss function and optimizer settings
+    Loss function 	: MSE function
+    optimizer 		: Adam optimizer
+	learning rate 	: 0.01
+	
+	Print loss every 10 epochs
+
+8. Model training
+    epochs : 20
+
+
+
