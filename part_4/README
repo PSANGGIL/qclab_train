@@ -1,0 +1,21 @@
+pip install SmilesPE
+pip install atomInSmiles
+
+data : '../data/drug/train.csv'
+
+
+token_type = ['string', 'atomwise', 'kmer', 'SPE', 'AIS']
+
+1. Convert SMILES to tokens using each method
+ ['atomwise', 'kmer', 'SPE', 'AIS']
+
+2. Define a decoder for each token
+
+3. Perform the SMILES -> TOKEN -> SMILES process using the defined encoder and decoder and check if the initial SMILES is recovered by drawing the molecular structure using MolToImage.
+
+4. ['string', 'atomwise'] Compare the differences between the two methods and check what differences occur after tokenization.
+
+5. Create a vocabulary of tokens in each tokenization method and check the tokens that appear at the maximum and minimum for each method.
+
+6. Plot the frequency of token types in each tokenization method with a plt.
+	Frequencies below 10 are ignored   
