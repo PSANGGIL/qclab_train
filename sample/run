@@ -1,4 +1,0 @@
-#!/bin/bash
-
-nohup python model.py 1>data_0902.out 2>data_0902.err &
-#nohup python model.py --gpus 8 --strategy ddp --batch_size 64 --precision 64 1>data_0902.out 2>data_0902.err &
