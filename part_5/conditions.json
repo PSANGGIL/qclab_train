@@ -1,0 +1,17 @@
+{
+    "csv_file_path": "../../data/drug/train.csv",
+    "vocab_file_path": "../../part_4/sample/",
+    "token_type": "AIS",
+    "target": "MLM",
+    "embed_dim": 128,
+    "hidden_dim": 64,
+    "output_dim": 1,
+    "num_layers": 3,
+    "train_batch_size": 2048,
+    "test_batch_size": 4096,
+    "model": "LSTM",
+    "lr": 0.01,
+    "epochs": 1000,
+    "save_pt": false,
+    "save_out": true
+}

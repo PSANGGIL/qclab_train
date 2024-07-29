@@ -1,0 +1,51 @@
+csv_file_path = '../../data/drug/train.csv'
+
+
+1. Define database
+
+
+def min_max_scaler
+Nomarize the data in the database --> save each value for data restoration after learning
+
+class DB(Dataset):
+
+Take the token vocab we created previously and convert each token to an int
+
+Add zero-padding to data converted to int
+
+Normalize mlm
+
+return SMILES, mlm
+
+
+2. Model definition
+
+lstm definition
+Add mask to data output from lstm 
+20% dropout from previous data 
+After applying the activate function (relu) to the previous data, output is output as a linear function.
+
+ mlp definition
+
+Consists of a total of three layers, performs a linear function in each layer and applies softplus, 20% dropout
+
+conditions['save_pt'] == True:
+--> save pt
+
+if conditions['save_outputs'] == True:
+--> save df[true_values, pred_values]
+
+All conditions are in the condition file
+
+All learning is done with cuda
+
+For the entire data, 80% is randomly divided into the train set and 20% into the test set.
+
+Loss function 	: MSE function
+optimizer 		: Adam optimizer
+	
+	Print loss every 10 epochs
+
+Compare learning results for 8 case(2 models and 4 tokens)
+
+
